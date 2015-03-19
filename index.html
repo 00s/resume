@@ -25,11 +25,16 @@
 		<div id="profile">
 
 			<div id="profile-container">
-					
-				<div class="content-holder animated fadeInUpBig">
-					
-					<img id="img-profile" src="assets/Adolfo-profile-1x1.jpeg" alt="Adolfo's portrait picture">
-					
+
+				<div class="flip-container animated fadeInUpBig" ontouchstart="this.classList.toggle('hover');">
+					<div class="content-holder flipper">
+						<div class="front">
+							<!-- front content -->
+						</div>
+						<div class="back">
+							<img id="img-profile" src="assets/Adolfo-profile-1x1.jpeg" alt="Adolfo's portrait picture">
+						</div>
+					</div>
 				</div>
 			
 				<div class="content-holder animated fadeInUp" id="profile-name">
@@ -40,15 +45,15 @@
 				
 					<hr class="profile-hr animated fadeInLeftBig">
 
-					<p id="profession" class="profile-basics animated pulse">front-end dev</p>
+					<p id="profession" class="profile-basics animated pulse">front end dev</p>
 					
 					<hr class="profile-hr animated fadeInRightBig">
 
 					<div class="animated fadeInDown">
 						<ul id="links" class="profile-basics">
-							<li ><a class="animate fadeIn bigger" href="https://github.com/00s"> github . com / 00s</a></li>
-							<li ><a class="animate fadeIn" href="https://www.linkedin.com/in/adfmelo"> ca.linkedin/adfmelo</a></li>
-							<li ><a class="animate fadeIn" href="tel:16132527268">+1 ( 613 ) 252 - 7268</a></li>
+							<li><a class="animate fadeIn bigger" href="https://github.com/00s"> github . com / 00s</a></li>
+							<li><a class="animate fadeIn" href="https://www.linkedin.com/in/adfmelo">ca.linkedin/adfmelo</a></li>
+							<li><a class="animate fadeIn" href="tel:16132527268">+1 ( 613 ) 252 - 7268</a></li>
 						</ul>
 					</div>
 				</div>

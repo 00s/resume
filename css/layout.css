@@ -6,7 +6,7 @@ body{
 #profile{
 	width: 35%;
 	position: fixed;
-	background-color: #1e1e1e;
+	background-color: white;
 	height: 100%;
 	display: table;
 
@@ -15,20 +15,68 @@ body{
 	-webkit-box-sizing: border-box;
 	border: 5px solid white;
 }
+
 #profile-container{
    display: table-cell;
    vertical-align: middle;
-   padding: 10%;
+   padding: 12% 0;
+   min-width: 293px;
 }
 
 #img-profile{
 	height: 200px;
 	/*border-radius: 100%;*/
-    position: relative;
 	display: block;
-	margin: 0 auto;
 	opacity: 0.9;
 }
+
+/* entire container, keeps perspective 										*/
+.flip-container {
+	perspective: 1000;
+    position: relative;
+	margin: 0 auto;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 200px;
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	background-color: #010101;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+/*////////////////////////////////////////////////////*/
 
 #profile-name{
 	font-size: 1.6em;
@@ -44,7 +92,7 @@ body{
 .profile-basics {
 	font-family: 'Unica One', cursive;
 	text-align: center;
-	color: white;
+	color: #1e1e1e;
 	padding: 15px;
 }
 
@@ -70,7 +118,8 @@ body{
 /* resume */
 #resume{
 	background-color: #fafafa;
-	font-family: 'Glegoo', serif;
+	font-family: "europa";
+	letter-spacing: 0.01em;
 	width: 65%;
 	overflow: scroll;
 	left:35%;
@@ -111,7 +160,7 @@ body{
 
 /* Links */
 a{
-	color: white;
+	color: #1e1e1e;
 	text-decoration: none;
 }a:hover{
 	color: #DA958D;
