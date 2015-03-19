@@ -9,11 +9,6 @@ body{
 	background-color: white;
 	height: 100%;
 	display: table;
-
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	border: 5px solid white;
 }
 
 #profile-container{
@@ -25,12 +20,13 @@ body{
 
 #img-profile{
 	height: 200px;
-	/*border-radius: 100%;*/
 	display: block;
 	opacity: 0.9;
 }
 
-/* entire container, keeps perspective 										*/
+/* flip card logic adapted from http://davidwalsh.name/css-flip 	*/
+
+/*	entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
     position: relative;
@@ -47,7 +43,7 @@ body{
 	height: 200px;
 }
 
-/* flip speed goes here */
+/* flip speed */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
@@ -76,7 +72,7 @@ body{
 .back {
 	transform: rotateY(180deg);
 }
-/*////////////////////////////////////////////////////*/
+/*			end flip													*/
 
 #profile-name{
 	font-size: 1.6em;
@@ -115,7 +111,7 @@ body{
 	max-width: 200px;
 }
 
-/* resume */
+/* 			resume 															*/
 #resume{
 	background-color: #fafafa;
 	font-family: "europa";
@@ -130,6 +126,13 @@ body{
 #resume-container{
 	margin: 90px 0 0 60px;
 }
+
+#resume-container h3{
+		width: 55px;
+		text-align: right;
+		font-size: 0.8em;
+		color: gray;
+	}
 
 .resume-item{
 	margin-bottom: 30px
@@ -171,23 +174,29 @@ a{
 }
 
 
-/* @media queries */
+/* @media queries
+		adapts the layout for devices with less than 780px width
+ */
 @media (max-width: 780px){
 	body{
 		max-width: 100%;
 	}
+
+	/* makes profile full-width */
 	#profile{
 		max-width: 100%;
 		width: 100%;
 		position: relative;
 
 	}
+	/* makes resume full-width and resets positioning */
 	#resume{
 		left: 0;
 		top: 40px;
 		width: 100%;
 		overflow: initial;
 	}
+
 	#resume-container{
 		margin: -10px 5px 15px 5px;
 	}
@@ -198,15 +207,16 @@ a{
 	}
 
 	#resume-container h3{
-		padding: 0 25px;
+		width: 100%;
+		text-align: center;
 	}
 
 	.resume-item small{
-		padding-left: 25px;
+		padding:  0 25px;
 	}
 
 	.content-divider{
-		margin-left: 75px;
+		margin: 0 25px;
 	}
 
 
