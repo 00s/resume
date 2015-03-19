@@ -30,10 +30,6 @@ body{
 	padding: 15px;
 }
 
-#profile-name{
-
-}
-
 .profile-base-style{
 	font-family: 'Unica One', cursive;
 	text-align: center;
@@ -64,19 +60,22 @@ body{
 	background-color: #fafafa;
 	font-family: 'Glegoo', serif;
 	width: 65%;
-	height: 100vh;
 	overflow: scroll;
 	left:35%;
 	color: #232;
 	position: relative;
+
 }
 #resume-container{
-	margin: 60px 0 0 60px;
+	margin: 90px 0 0 60px;
 }
 
+.resume-item{
+	margin-bottom: 30px
+}
 
 .resume-item p{
-	padding: 35px 65px;
+	padding: 35px 60px;
 	letter-spacing: 0.04em;
 	line-height: 155%;
 	font-weight: 300;
@@ -85,7 +84,7 @@ body{
 .resume-item small{
 	font-size: 0.8em;
 	color: #989;
-	padding-left: 30px ;
+	padding-left: 60px ;
 }
 
 .content-divider{
@@ -95,12 +94,6 @@ body{
 	margin-left: 60px;
 }
 
-.block-divider{
-	height: 5px;
-	margin-bottom: 2%;
-	background-color: #1e1e1e;
-
-}
 
 /*end resume */
 
@@ -130,20 +123,29 @@ a{
 	}
 	#resume{
 		left: 0;
+		top: 40px;
 		width: 100%;
 		overflow: initial;
 	}
 	#resume-container{
-		margin: 5px 0 15px 5px;
+		margin: -10px 5px 15px 5px;
 	}
 
 	#resume-container p{
 		font-size: 0.9em;
-		padding: 25px 10px 20px 30px;
+		padding: 25px;
 	}
 
-	.block-divider{
-		margin-bottom: 10%;
+	#resume-container h3{
+		padding: 0 25px;
+	}
+
+	.resume-item small{
+		padding-left: 25px;
+	}
+
+	.content-divider{
+		margin-left: 75px;
 	}
 
 
