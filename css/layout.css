@@ -128,27 +128,29 @@ body{
 }
 
 #resume-container h3{
-		width: 55px;
+		width: 60px;
 		text-align: right;
 		font-size: 0.8em;
+		margin-left: -5px;
+		padding-right: 3px;
 		color: gray;
 	}
 
 .resume-item{
-	margin-bottom: 30px
+	margin: 30px 0;
 }
 
 .resume-item p{
-	padding: 35px 60px;
+	padding: 25px 60px 10px 60px;
 	letter-spacing: 0.04em;
-	line-height: 155%;
+	line-height: 165%;
 	font-weight: 300;
 }
 
 .resume-item small{
-	font-size: 0.8em;
-	color: #989;
-	padding-left: 60px ;
+	font-size: 0.9em;
+	color: gray;
+	padding-left: 60px;
 }
 
 .content-divider{
@@ -157,7 +159,6 @@ body{
 	margin-top: -8px;
 	margin-left: 60px;
 }
-
 
 /*end resume */
 
@@ -173,22 +174,19 @@ a{
     color: #D97F7C;
 }
 
-
 /* @media queries
 		adapts the layout for devices with less than 780px width
  */
 @media (max-width: 780px){
-	body{
-		max-width: 100%;
-	}
+
 
 	/* makes profile full-width */
 	#profile{
 		max-width: 100%;
 		width: 100%;
 		position: relative;
-
 	}
+
 	/* makes resume full-width and resets positioning */
 	#resume{
 		left: 0;
@@ -218,6 +216,5 @@ a{
 	.content-divider{
 		margin: 0 25px;
 	}
-
 
 }
