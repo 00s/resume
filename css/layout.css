@@ -154,7 +154,9 @@ body{
 /* select .smaller that are right after p tags */
 p + .smaller{
 	font-size: 0.9em;
+	margin-top: 5px;
 	color: gray;
+
 }
 
 p > a{
@@ -166,6 +168,16 @@ p > a{
 	height: 1px;
 	margin-top: -8px;
 	margin-left: 60px;
+}
+
+.resume-item ul{
+	margin: 20px;
+	padding-left: 40px;
+	list-style-type: square;
+}	
+
+.resume-item ul li{
+	margin: 6px 0;
 }
 
 /*end resume */
