@@ -75,9 +75,9 @@ body{
 	
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
-	line-height: 30px;
-	font-size: 0.75em;
-	letter-spacing: 0.6px;
+	line-height: 2.2em;
+	font-size: 0.7em;
+	letter-spacing: 0.5px;
 	max-width: 300px;
 	margin: 0 auto;
 	padding: 0px 20px;
@@ -141,7 +141,6 @@ body{
 	left:35%;
 	color: #232;
 	position: relative;
-
 }
 
 .resume-item{
@@ -168,6 +167,7 @@ span:nth-child(2n+1){
 }
 .subject h3{
 
+	font-family: 'Montserrat', sans-serif;
 	margin-top: 5px;
 	color: #444;
 	font-size: 13px;
@@ -180,7 +180,7 @@ span:nth-child(2n+1){
 	width: 50%;
 	height: auto;
 	font-family: 'Montserrat', sans-serif;
-	margin: auto;
+	/*margin: auto;*/
 	flex-grow: 7;
 	-webkit-flex-grow: 7; /* safari support */
 }
@@ -194,6 +194,32 @@ span:nth-child(2n+1){
 	color: #5b5b5b;
 	line-height: 24px;
 
+}
+
+.resume-item:last-child{
+	padding-bottom: 1em;
+	background-color: whiteSmoke; 
+}
+
+.description h5{
+	margin-top: 0.4em;
+	margin-bottom: 2em;
+	line-height: 1.5em;
+}
+
+.description h6{
+	font-size: 0.6em;
+	margin-top: 3em;
+	color: #cacaca;
+}
+
+/* consecutive paragraphs */
+p + p{
+	margin-top: 1em;
+}
+
+p > b{
+	font-weight: 700;
 }
 
 /* select .smaller that are right after p tags */
@@ -234,7 +260,7 @@ a{
 	color: #1e1e1e;
 	text-decoration: none;
 }a:hover{
-	color: #DA958D;
+	color: #E7B64F;
 }a:visited{
 	/*color: #DAAFAD;*/
 }a:active {
