@@ -191,8 +191,6 @@ span.resume-item:nth-child(2n+1){
 	/*margin: auto;*/
 	flex-grow: 7;
 	-webkit-flex-grow: 7; /* safari support */
-
-
 }
 
 .job-item{
@@ -229,13 +227,11 @@ span.resume-item:nth-child(2n+1){
 
 /* Base text style */
 .description p, li{
-	
 	font-family: "Open Sans";
 	font-weight: 400;
 	font-size: 13px;
 	color: #5b5b5b;
 	line-height: 22px;
-
 }
 
 .resume-item:last-child{
@@ -431,7 +427,6 @@ a{
 		vertical-align: middle;
 		height: 100vh;
 		max-height: 414px;
-
 	}
 
 	#img-profile-holder{
@@ -453,7 +448,6 @@ a{
 
 	#contact-icons{
 		position: relative;
-
 	}
 
 	#contact-icons ul li a img{
