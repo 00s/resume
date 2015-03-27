@@ -12,7 +12,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700' rel='stylesheet' type='text/css'> -->
 	
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/reset.css">
@@ -33,6 +34,8 @@
 					</a>
 				</figure>
 
+				<div id="profile-gradient"></div>
+
 				<div id="info-holder">
 					<p id="profession" class=" animated rotateInDownRight">DEVELOPER</p>
 		
@@ -50,19 +53,29 @@
 						
 						<ul>
 							<li>
-								<a target="_blank" href="https://www.facebook.com/adolfo.m.farias"><img src="assets/icons/facebook.svg" alt="facebook icon"></a>
+								<a target="_blank" href="https://www.facebook.com/adolfo.m.farias">
+									<img src="assets/icons/facebook.svg" alt="facebook icon">
+								</a>
 							</li>
 							<li>
-								<a target="_blank" href="https://github.com/00s"><img src="assets/icons/github.svg" alt="github icon"></a>
+								<a target="_blank" href="https://github.com/00s">
+									<img src="assets/icons/github.svg" alt="github icon">
+								</a>
 							</li>
 							<li>
-								<a target="_blank" href="mailto:adf.melo@gmail.com"><img src="assets/icons/email.svg" alt="email icon"></a>
+								<a target="_blank" href="mailto:adf.melo@gmail.com">
+									<img src="assets/icons/email.svg" alt="email icon">
+								</a>
 							</li>
 							<li>
-								<a target="_blank" href="https://www.linkedin.com/in/adfmelo"><img src="assets/icons/linkedin.svg" alt="linkedin icon"></a>
+								<a target="_blank" href="https://www.linkedin.com/in/adfmelo">
+									<img src="assets/icons/linkedin.svg" alt="linkedin icon">
+								</a>
 							</li>
-							<li>
-								<a target="_blank" href="https://instagram.com/adf.melo/"><img src="assets/icons/instagram.svg" alt="instagram icon"></a>
+							<li >
+								<a  target="_blank" href="https://instagram.com/adf.melo/">
+									<img id="reduced-size" src="assets/icons/instagram.svg" alt="instagram icon">
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -157,14 +170,31 @@
 			
 			<div class="description">
 				
-				<h5 class="position">Web Developer (scholarship) | Greenhug, Brazil | Mar - Aug 2014</h5>
+				<div class="job-item">
+					<div class="job-position">
+						<h5>Web Developer Intern</h5>
+						<p><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_english">Sebrae</a>, Brazil  </p>
+						<p>
+							Mar - Aug 2014 </p>
+					</div>
 
-				<p>Worked on a Rails web application for the <a href="http://www.greenhug.me">greenhug.me</a> project, designing the system functionalities and database solutions with SQLite3, implementing webpages, and working on a core API for the Android app.</p>
+					<p class="job-description">
+						Worked on a Rails web application for the <a href="http://www.greenhug.me">greenhug.me</a> project, designing the system functionalities and database solutions with SQLite3, implementing webpages, and working on a core API for the Android app.</p>
+					
+				</div>
 
-				<h5 class="position">Researcher, Content Producer | IFRN, Brazil | Sep 2013 - Feb 2014</h5>
+				<div class="job-item">
+					<div class="job-position">
+						<h5> Researcher, <br> Content Producer </h5>
+						<p>IFRN, Brazil</p>
+					 	<p> 
+							Sep 2013 - Feb 2014 </p>
+					</div>
 
-				<p>Taught object orientation principles to the local community and built content for a <a href="http://goo.gl/cgsBkv">youtube channel</a> (in Portuguese), all in Java, using the Greenfoot IDE. </p>
+					<p class="job-description">
+						Taught object orientation principles to the local community and built content for a <a href="http://goo.gl/cgsBkv">Youtube Channel</a>, all in Java, using the Greenfoot IDE. </p>
 
+				</div>
 			</div>
 
 		</span>
@@ -177,10 +207,12 @@
 
 			<div class="description">
 			
-				<p> Software Engineering Technology / 2014 - 2015</p>
+				<p> Software Engineering Technology 
+				<br> 2014 - 2015</p>
 				<p class="smaller">Exchange student at Centennial College, Toronto, Canada</p>
 
-				<p>Software Analisys and Development / 2012 - 2016</p>
+				<p>Software Analisys and Development 
+				<br> 2012 - 2016</p>
 				<p class="smaller">Instituto Federal do Rio Grande do Norte, Natal, Brazil</p>
 			</div>
 
@@ -208,11 +240,11 @@
 				<h3> GET IN TOUCH </h3>
 			</div>
 
-			<div class="description">
+			<div class="description" id="thanks">
 			
 				<h5>Thanks for visiting!</h5>
 
-				<p> If you have an interesting project, and are looking for a hard-working, passionate developer, <a href="mailto:adf.melo@gmail.com">challenge me!</a></p>
+				<p> If you have an interesting project, and looking for a hard-working, passionate developer, <a href="mailto:adf.melo@gmail.com">challenge me!</a></p>
 
 				<!-- <h6> © 2015 Adolfo Melo </h6> -->
 			</div>
