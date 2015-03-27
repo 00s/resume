@@ -296,6 +296,10 @@ a{
 	text-decoration: none;
 }
 
+#contact-icons ul li a{
+	text-decoration: none;
+}
+
 #thanks p, #thanks h5{
 	font-size: 0.9em;
 	margin: 5px 0; 
