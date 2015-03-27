@@ -13,6 +13,7 @@ body{
 	min-width: 275px;
 	height: 100%;
 	position: fixed;
+	background-color: rgb(241, 177, 68);
 	background-image: url('../assets/background.jpg');
 	color: #fafafa;
 	text-align: center;	
