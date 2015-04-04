@@ -1,5 +1,5 @@
 <!--
-	Adolfo Melo - v0.1
+	Adolfo Melo - v0.1.2
 -->
 
 <!DOCTYPE html>
@@ -112,12 +112,12 @@
 				<h3>SOFT SKIILS</h3>
 			</div>
 			
-			<div class="description fading">
+			<div class="description">
 				<ul class='skills-list'>
-					<li> Excellent problem solver and fast learner </li>
-					<li> Work well independently or in fast moving teams </li>
-					<li> Focused on quality, maintainability and efficiency </li>
-					<li> Take ownership of problems to ensure goals are achieved </li>
+					<li class="fading"> Excellent problem solver and fast learner </li>
+					<li class="fading"> Work well independently or in fast moving teams </li>
+					<li class="fading"> Focused on quality, maintainability and efficiency </li>
+					<li class="fading"> Take ownership of problems to ensure goals are achieved </li>
 				</ul>
 			</div>
 
@@ -130,19 +130,19 @@
 				<h3>TECH SKIILS</h3>
 			</div>
 			
-			<div class="description fading">
+			<div class="description">
 				<ul id="skills">
-					<li>HTML5, Haml</li>
-					<li>CSS3, Sass</li>
-					<li>JavaScript</li>
-					<li>TypeScript, CoffeeScript </li>
-					<li>JSON, JQuery, Bootstrap</li> 
-					<li>Git, Github</li>
-					<li>Create.js, Paper.js, THREE.js</li>
-					<li>Java, Android</li> 
-					<li>C, C#,  Ruby, Python</li>
-					<li>Sqlite, VBScript, Access</li>
-					<li>Arduino, RFID</li>
+					<li class="fading">HTML5, Haml</li>
+					<li class="fading">CSS3, Sass</li>
+					<li class="fading">JavaScript</li>
+					<li class="fading">TypeScript, CoffeeScript </li>
+					<li class="fading">JSON, JQuery, Bootstrap</li> 
+					<li class="fading">Git, Github</li>
+					<li class="fading">Create.js, Paper.js, THREE.js</li>
+					<li class="fading">Java, Android</li> 
+					<li class="fading">C, C#,  Ruby, Python</li>
+					<li class="fading">Sqlite, VBScript, Access</li>
+					<li class="fading">Arduino, RFID</li>
 				</ul>
 			</div>
 
@@ -156,28 +156,28 @@
 			
 			<div class="description">
 				
-				<div class="job-item fading">
+				<div class="job-item">
 					<div class="job-position">
-						<h5>Web Developer Intern</h5>
-						<p><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_english">Sebrae</a>, Brazil  </p>
-						<p>
+						<h5 class="fading">Web Developer Intern</h5>
+						<p class="fading"><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_english">Sebrae</a>, Brazil  </p>
+						<p class="fading">
 							Mar - Aug 2014 </p>
 					</div>
 
-					<p class="job-description">
+					<p class="job-description fading">
 						Worked on a Rails web application for the <a href="http://www.greenhug.me">greenhug.me</a> project, designing the system functionalities and database solutions with SQLite3, implementing webpages, and working on a core API for the Android app.</p>
 					
 				</div>
 
-				<div class="job-item fading">
+				<div class="job-item ">
 					<div class="job-position">
-						<h5> Researcher, <br> Content Producer </h5>
-						<p>IFRN, Brazil</p>
-					 	<p> 
+						<h5 class="fading"> Researcher, <br> Content Producer </h5>
+						<p class="fading">IFRN, Brazil</p>
+					 	<p class="fading"> 
 							Sep 2013 - Feb 2014 </p>
 					</div>
 
-					<p class="job-description ">
+					<p class="job-description fading">
 						Taught object orientation principles to the local community and built content for a <a href="http://goo.gl/cgsBkv">Youtube Channel</a>, all in Java, using the Greenfoot IDE. </p>
 
 				</div>
@@ -191,21 +191,28 @@
 			</div>
 
 			<div class="description fading">
-			
-				<p> Software Engineering Technology 
-				<br> 2014 - 2015</p>
-				<p class="smaller">Exchange student at Centennial College, Toronto, Canada</p>
+				<div class="fading">
+					
+					<p> Software Engineering Technology 
+					<br> 2014 - 2015</p>
+					<p class="smaller">Exchange student at Centennial College, Toronto, Canada</p>
 
-				<p>Software Analisys and Development 
-				<br> 2012 - 2016</p>
-				<p class="smaller">Instituto Federal do Rio Grande do Norte, Natal, Brazil</p>
+				</div>
+				
+				<div class="fading">
+					
+					<p>Software Analisys and Development 
+					<br> 2012 - 2016</p>
+					<p class="smaller">Instituto Federal do Rio Grande do Norte, Natal, Brazil</p>
+				
+				</div>
 			</div>
 
 		</span>
 
 		<span class="resume-item" id="thanks">
 		
-			<div class="description" id="thanks">
+			<div class="description" >
 			
 				<h5>Thanks for visiting!</h5>
 
@@ -255,37 +262,31 @@
 		$(window).on('scroll', function () {
 			$( ".fading" ).each(function( index ) {
 
-		    	var scrollTop     = $(window).scrollTop(),
+		    	var scrollTop = $(window).scrollTop(),
 		        elementOffset = $(this).offset().top,
 		        distance      = (elementOffset - scrollTop);
 
-		   		// console.log( index + ": " + distance );
-		        
+		        var contentIsSmallerThanViewportHeight = ($(window).height() > $(this).height() + 10);
 
-		        if(distance < minDistance){
+		        if( distance < minDistance && contentIsSmallerThanViewportHeight ){
 		        	var fade = ((100 - ((distance - minDistance) * (-1))) * 0.01);
-		        	console.log("fade: " + fade);
+		        	// console.log("fade: " + fade);
 		        	$( this ).css('opacity', fade);
-		        	// $(this).stop().fadeTo(100, 0);
 		        } else if (distance > 150){
 		            $( this ).css('opacity', 1);
 		        };
 
-		        	
-			
 			});
 
 		});
 		
 
-		$('.contact-icons ul li a').hover(function(){
-		    $(this).toggleClass(' animated pulse');
-		    // $('#thanks').children().toggleClass('hover');
+		$('.contact-icons ul li a img').hover(function(){
+		    $(this).toggleClass('animated pulse');
 		});
 
 		$('#thanks').hover(function(){
-		    $(this).toggleClass(' animated pulse');
-		    // $('#thanks').children().toggleClass('hover');
+		    $(this).toggleClass('animated pulse');
 		});
 
 	</script>
