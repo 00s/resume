@@ -8,7 +8,7 @@ body{
 
 #thanks .contact-icons{
 	position: relative;
-	margin: 3em auto 1em auto;;
+	margin: 15px auto 15px auto;;
 }
 
 #thanks{
@@ -16,6 +16,7 @@ body{
 }
 #thanks p, #thanks h3, #thanks h5{
 	padding-top: 1em;
+	padding-bottom: 1em;
 	color: #fafafa;
 }
 
