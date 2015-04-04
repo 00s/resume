@@ -257,7 +257,9 @@
 	</div>
 
 	<script>
-		var minDistance = 80;
+		var minDistance = 80,
+		marginTolerance = 20
+		windowH = $(window).height();
 
 		$(window).on('scroll', function () {
 			$( ".fading" ).each(function( index ) {
@@ -266,7 +268,7 @@
 		        elementOffset = $(this).offset().top,
 		        distance      = (elementOffset - scrollTop);
 
-		        var contentIsSmallerThanViewportHeight = ($(window).height() > $(this).height() + 10);
+		        var contentIsSmallerThanViewportHeight = (windowH > $(this).height() + marginTolerance);
 
 		        if( distance < minDistance && contentIsSmallerThanViewportHeight ){
 		        	var fade = ((100 - ((distance - minDistance) * (-1))) * 0.01);
