@@ -6,6 +6,39 @@ body{
 	background-color: #fafafa;
 }
 
+#thanks .contact-icons{
+	position: relative;
+	margin: 3em auto 1em auto;;
+}
+
+#thanks{
+	background-color: #010101;
+}
+#thanks p, #thanks h3, #thanks h5{
+	padding-top: 1em;
+	color: #fafafa;
+}
+
+#thanks h5{
+	color: orange;
+}	
+
+#thanks h6{
+	color: #ebebeb;
+	font-size: 0.6em;
+	font-weight: 300;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+}
+
+#thanks .description{
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
 /* (side) profile */
 #profile{
 	font-family: 'Montserrat', sans-serif;
@@ -108,13 +141,13 @@ body{
 	vertical-align: bottom;
 }
 
-#contact-icons{
+.contact-icons{
 	position: absolute;
 	width: 100%;
 	bottom: 2vh;
 }
 
-#contact-icons ul li{
+.contact-icons ul li{
 
 	display: inline;
   	list-style-type: none;
@@ -122,7 +155,7 @@ body{
   	padding-right: 10px;
 }
 
-#contact-icons ul li a img{
+.contact-icons ul li a img{
 	height: 3.2vh;
 	opacity: 1;
 }
@@ -131,7 +164,7 @@ body{
 		height: 3vh !important;
 }
 
-#contact-icons ul li a img:hover{
+.contact-icons ul li a img:hover{
 	opacity: 0.85;
 }
 
@@ -145,7 +178,7 @@ body{
 	width: 65%;
 	overflow-y: scroll;
 	left:35%;
-	color: #232;
+	color: #010101;
 	position: relative;
 }
 
@@ -185,6 +218,7 @@ span.resume-item:nth-child(2n+1){
 }
 
 .resume-item .description{
+	opacity: 0.8;
 	width: 50%;
 	height: auto;
 	font-family: 'Montserrat', sans-serif;
@@ -296,7 +330,7 @@ a{
 	text-decoration: none;
 }
 
-#contact-icons ul li a{
+.contact-icons ul li a{
 	text-decoration: none;
 }
 
@@ -450,11 +484,11 @@ a{
 		display: none;
 	}
 
-	#contact-icons{
+	.contact-icons{
 		position: relative;
 	}
 
-	#contact-icons ul li a img{
+	.contact-icons ul li a img{
 		height: 1.5em;
 		margin: 8px;
 		position: relative;

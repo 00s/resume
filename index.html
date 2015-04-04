@@ -49,10 +49,10 @@
 					<hr class="profile-hr animated rotateInUpRight">
 
 					<p id="short-description" class="animated rotateInUpLeft">
-						I'm a Brazilian developer driven by never-ending curiosity, luckly enjoying Toronto for a year. 
+						I'm a Brazilian developer driven by never-ending curiosity, luckly exploring Toronto for a year. 
 					</p>
 					
-					<div id="contact-icons" class=" animated fadeInUp">
+					<div  class="contact-icons animated fadeInUp">
 						
 						<ul>
 							<li>
@@ -90,7 +90,7 @@
 
 	<div id="resume">
 		
-		<span class="resume-item animated slideInUp">
+		<span class="resume-item animated slideInUp fading" >
 			
 			<div class="subject">
 				
@@ -106,7 +106,7 @@
 
 		</span>
 		
-		<span class="resume-item animated slideInUp">
+		<span class="resume-item animated slideInUp fading" >
 			
 			<div class="subject">
 				<h3>SOFT SKIILS</h3>
@@ -124,7 +124,7 @@
 		</span>
 
 
-		<span class="resume-item animated slideInUp">
+		<span class="resume-item animated slideInUp fading">
 			
 			<div class="subject">
 				<h3>TECH SKIILS</h3>
@@ -148,7 +148,7 @@
 
 		</span>
 
-		<span class="resume-item animated slideInUp">
+		<span class="resume-item animated slideInUp fading">
 			
 			<div class="subject">
 				<h3>EXPERIENCE</h3>
@@ -185,7 +185,7 @@
 
 		</span>
 
-		<span class="resume-item animated slideInUp">
+		<span class="resume-item animated slideInUp fading">
 			<div class="subject">
 				<h3>EDUCATION</h3>
 			</div>
@@ -203,24 +203,90 @@
 
 		</span>
 
-		<span class="resume-item">
+		<span class="resume-item fading" id="thanks">
 		
-			<div class="subject">
+			<!-- <div class="subject">
 				<h3> GET IN TOUCH </h3>
-			</div>
+			</div> -->
 
 			<div class="description" id="thanks">
 			
 				<h5>Thanks for visiting!</h5>
 
-				<p> If you have an awesome project, or want to chat <a href="mailto:adf.melo@gmail.com">drop me a line!</a></p>
+				<p> If you have an awesome project or would just like to chat, go ahead and <a href="mailto:adf.melo@gmail.com">drop me a line!</a></p>
 
-				<!-- <h6> © 2015 Adolfo Melo </h6> -->
+				<div  class="contact-icons animated fadeInUp">
+						
+						<ul>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/adolfo.m.farias">
+									<img src="assets/icons/facebook.svg" alt="facebook icon">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/00s">
+									<img src="assets/icons/github.svg" alt="github icon">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="mailto:adf.melo@gmail.com">
+									<img src="assets/icons/email.svg" alt="email icon">
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.linkedin.com/in/adfmelo">
+									<img src="assets/icons/linkedin.svg" alt="linkedin icon">
+								</a>
+							</li>
+							<li >
+								<a  target="_blank" href="https://instagram.com/adf.melo/">
+									<img id="reduced-size" src="assets/icons/instagram.svg" alt="instagram icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				<h6> Made with ♥ in Toronto <br>© 2015 Adolfo Melo </h6>
 			</div>
 
 		</span>
 
 	</div>
+
+	<script>
+
+		$(window).on('scroll', function () {
+			$( ".resume-item" ).each(function( index ) {
+
+		    	var scrollTop     = $(window).scrollTop(),
+		        elementOffset = $(this).offset().top,
+		        distance      = (elementOffset - scrollTop);
+
+		   		// console.log( index + ": " + distance );
+		        
+
+		        if(distance < 0){
+		        	var fade = ((100 - (distance * (-1))) * 0.01);
+		        	console.log("fade: " + fade);
+		        	$( this ).css('opacity', fade);
+		        	// $(this).stop().fadeTo(100, 0);
+		        } else if (distance > 150){
+		            $( this ).css('opacity', 1);
+		        };
+
+		        	
+			
+			});
+
+		});
+		
+
+		$('.contact-icons ul li a').hover(function(){
+		    $(this).toggleClass(' animated pulse');
+		    // $('#thanks').children().toggleClass('hover');
+		});
+
+	</script>
 
 </body>
 </html>
