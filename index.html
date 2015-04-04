@@ -90,15 +90,15 @@
 
 	<div id="resume">
 		
-		<span class="resume-item animated slideInUp fading" >
+		<span class="resume-item animated slideInUp" >
 			
-			<div class="subject">
+			<div class="subject fading">
 				
 				<h3>OBJECTIVE</h3>
 
 			</div>
 
-			<div class="description">
+			<div class="description fading">
 				
 				<p>Seeking a challenging intern position as a front end developer, where I can push maintainable, clean code to bring responsive and elegant web design solutions to life. </p>
 				
@@ -106,13 +106,13 @@
 
 		</span>
 		
-		<span class="resume-item animated slideInUp fading" >
+		<span class="resume-item animated slideInUp" >
 			
-			<div class="subject">
+			<div class="subject fading">
 				<h3>SOFT SKIILS</h3>
 			</div>
 			
-			<div class="description">
+			<div class="description fading">
 				<ul class='skills-list'>
 					<li> Excellent problem solver and fast learner </li>
 					<li> Work well independently or in fast moving teams </li>
@@ -124,13 +124,13 @@
 		</span>
 
 
-		<span class="resume-item animated slideInUp fading">
+		<span class="resume-item animated slideInUp">
 			
-			<div class="subject">
+			<div class="subject fading">
 				<h3>TECH SKIILS</h3>
 			</div>
 			
-			<div class="description">
+			<div class="description fading">
 				<ul id="skills">
 					<li>HTML5, Haml</li>
 					<li>CSS3, Sass</li>
@@ -148,15 +148,15 @@
 
 		</span>
 
-		<span class="resume-item animated slideInUp fading">
+		<span class="resume-item animated slideInUp ">
 			
-			<div class="subject">
+			<div class="subject fading">
 				<h3>EXPERIENCE</h3>
 			</div>
 			
 			<div class="description">
 				
-				<div class="job-item">
+				<div class="job-item fading">
 					<div class="job-position">
 						<h5>Web Developer Intern</h5>
 						<p><a href="http://www.sebrae.com.br/sites/PortalSebrae/canais_adicionais/sebrae_english">Sebrae</a>, Brazil  </p>
@@ -169,7 +169,7 @@
 					
 				</div>
 
-				<div class="job-item">
+				<div class="job-item fading">
 					<div class="job-position">
 						<h5> Researcher, <br> Content Producer </h5>
 						<p>IFRN, Brazil</p>
@@ -177,7 +177,7 @@
 							Sep 2013 - Feb 2014 </p>
 					</div>
 
-					<p class="job-description">
+					<p class="job-description ">
 						Taught object orientation principles to the local community and built content for a <a href="http://goo.gl/cgsBkv">Youtube Channel</a>, all in Java, using the Greenfoot IDE. </p>
 
 				</div>
@@ -185,12 +185,12 @@
 
 		</span>
 
-		<span class="resume-item animated slideInUp fading">
-			<div class="subject">
+		<span class="resume-item animated slideInUp">
+			<div class="subject fading">
 				<h3>EDUCATION</h3>
 			</div>
 
-			<div class="description">
+			<div class="description fading">
 			
 				<p> Software Engineering Technology 
 				<br> 2014 - 2015</p>
@@ -203,12 +203,8 @@
 
 		</span>
 
-		<span class="resume-item fading" id="thanks">
+		<span class="resume-item" id="thanks">
 		
-			<!-- <div class="subject">
-				<h3> GET IN TOUCH </h3>
-			</div> -->
-
 			<div class="description" id="thanks">
 			
 				<h5>Thanks for visiting!</h5>
@@ -254,9 +250,10 @@
 	</div>
 
 	<script>
+		var minDistance = 80;
 
 		$(window).on('scroll', function () {
-			$( ".resume-item" ).each(function( index ) {
+			$( ".fading" ).each(function( index ) {
 
 		    	var scrollTop     = $(window).scrollTop(),
 		        elementOffset = $(this).offset().top,
@@ -265,8 +262,8 @@
 		   		// console.log( index + ": " + distance );
 		        
 
-		        if(distance < 0){
-		        	var fade = ((100 - (distance * (-1))) * 0.01);
+		        if(distance < minDistance){
+		        	var fade = ((100 - ((distance - minDistance) * (-1))) * 0.01);
 		        	console.log("fade: " + fade);
 		        	$( this ).css('opacity', fade);
 		        	// $(this).stop().fadeTo(100, 0);
