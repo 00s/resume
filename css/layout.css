@@ -92,19 +92,20 @@ body{
 }
 
 #profile-name{
-	color: #fafafa;
+	margin: 10px 0;
+}
+
+#profile-name p{
+    color: #fafafa;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: 700;
 	letter-spacing: 5px;
-	
-	margin: 10px 0;
 }
 
 .profile-hr{
 	width: 60px;
 	border: 1px solid #fafafa;
-
 	margin: 35px auto;
 }
 #short-description{
@@ -161,7 +162,7 @@ body{
 	opacity: 1;
 }
 
-#reduced-size{
+.reduced-size{
 		height: 3vh !important;
 }
 
@@ -193,7 +194,7 @@ body{
 }
 
 /* makes background */
-span.resume-item:nth-child(2n+1){
+.resume-item:nth-child(2n+1){
 	background: white;
 }
 
