@@ -242,7 +242,7 @@
 				</div>
 
 				<h6 id="made-with"> Made with <span class="heart">♥</span> in Toronto 
-				<br>Awesome details by <a href="https://twitter.com/arthurchayka">@ArthurChayka</a>
+				<br>Awesome details by <a href="https://dribbble.com/arthurchayka">@ArthurChayka</a>
 				<br>© 2015 Adolfo Melo </h6>
 			</div>
 
@@ -280,11 +280,12 @@
 		// Image preloader
 		var onhoverIcons = new Array();
 		var overPath = "assets/icons/Onhover/";
-		// var outlinedPath = "assets/icons/Outlined/";
 
 		$(window).load(function(){
 
+
 			$.preload(
+				// images to be preloaded
 				overPath + "facebook_hover.svg",
 				overPath + "github_hover.svg",
 				overPath + "mailbox_hover.svg",
@@ -294,6 +295,8 @@
 
 		});
 
+
+		// Preload and cache array of images
 		(function($) {
 		  var cache = [];
 		  // Arguments are image paths relative to the current page.
