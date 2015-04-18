@@ -25,7 +25,7 @@ body{
 #thanks{
 	background-color: #444;
 }
-#thanks p, #thanks h3, #thanks h5{
+#thanks p, #thanks h3{
 	padding-top: 1em;
 	padding-bottom: 1em;
 	color: #fafafa;
@@ -33,7 +33,6 @@ body{
 
 #thanks h5{
 	color: white;
-	font-size: 1.3em;
 }	
 
 #thanks h6{
