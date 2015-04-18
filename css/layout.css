@@ -25,11 +25,7 @@ body{
 #thanks{
 	background-color: #444;
 }
-#thanks p, #thanks h3{
-	padding-top: 1em;
-	padding-bottom: 1em;
-	color: #fafafa;
-}
+
 
 #thanks h5{
 	color: white;
@@ -353,6 +349,14 @@ a{
 	margin: 5px 0; 
 } 
 
+#thanks p, #thanks h3{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: #fafafa;
+	max-width: 320px;
+	margin: 0 auto;
+	font-weight: 300;
+}
 /* Footer Icons */
 
 .heart{
@@ -370,6 +374,10 @@ a{
 
 .footer-row li{
 	display: inline-block;
+}
+
+li.footer-facebook{
+	padding-left: 0 !important; 
 }
 
 .footer-row ul>li>a {
@@ -443,7 +451,7 @@ a{
 	#profile-name{
 		margin-top: 10px;
 		margin-bottom: 0;
-		font-size: 31px;
+		font-size: 1em;
 	}
 
 	.profile-hr{
