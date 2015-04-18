@@ -6,13 +6,24 @@ body{
 	background-color: #fafafa;
 }
 
+
+/* make text selection respective color */
+::selection {
+  background: #010101; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #010101; /* Gecko Browsers */
+  color: white;
+}
+
 #thanks .contact-icons{
 	position: relative;
 	margin: 15px auto 15px auto;
 }
 
 #thanks{
-	background-color: #010101;
+	background-color: #444;
 }
 #thanks p, #thanks h3, #thanks h5{
 	padding-top: 1em;
@@ -21,7 +32,8 @@ body{
 }
 
 #thanks h5{
-	color: orange;
+	color: white;
+	font-size: 1.3em;
 }	
 
 #thanks h6{
@@ -30,7 +42,7 @@ body{
 	font-weight: 300;
 	margin-top: 2em;
 	margin-bottom: 1.5em;
-	line-height: 1.5em;
+	line-height: 1.6em;
 }
 
 #thanks .description{
@@ -348,7 +360,8 @@ a{
 	font-size: 1.5em;
 }
 
-#made-with:hover *{
+/* select HEART*/
+#made-with:hover :first-child{
 	color: red;
 }
 
