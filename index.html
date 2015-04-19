@@ -306,6 +306,18 @@
 		    }
 		  }
 		})(jQuery)
+
+
+		var img = new Image(),
+	    	url = "assets/background.jpg";
+		
+
+		img.onload = function () { 
+			$("#profile").css("background-image",  "url("+ img.src +")");
+			// $("#profile").css("background-repeat", "no-repeat");
+			// console.log("Background loaded: " + "url("+ img.src +")");
+		};
+		img.src = url;
 	</script>
 
 </body>

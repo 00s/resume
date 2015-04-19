@@ -120,12 +120,12 @@ body{
 	height: 100%;
 	position: fixed;
 	background-color: rgb(241, 177, 68);
-	background-image: url('../assets/background.jpg');
+	/*background-image: url('../assets/orange-square.jpeg');*/
+	/*background-repeat: repeat;*/
 	color: #fafafa;
 	text-align: center;	
 	z-index: 1;
 	overflow-y: hidden;
-
 	-webkit-box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    1px 1px 20px 0px rgba(50, 50, 50, 0.3);
 	box-shadow:         1px 1px 20px 0px rgba(50, 50, 50, 0.3);
@@ -493,7 +493,8 @@ li.footer-facebook{
 		adapts the layout for devices with less than 780px width */
 
  /* mobile devices : portrait orientation */
-@media only screen and (max-device-width: 770px) and (orientation: portrait){
+
+@media only screen and (orientation: portrait){
 	
 	/* makes profile full-screen */
 	#profile{
