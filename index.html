@@ -5,12 +5,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Resume: Adolfo Farias </title>
-
-	<link rel="shortcut icon" href="assets/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400|Montserrat:400,700" rel="stylesheet" type="text/css">
+	<title>Resume: Adolfo Farias </title>
+	<link rel="shortcut icon" href="assets/favicon.ico" />
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -244,11 +241,28 @@
 	</div>
 
 	<!-- JS -->
-	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" onload="initResume()"></script>
+
+	<script async>
+		// Google Fonts
+		WebFontConfig = {
+			google: { families: [ 'Montserrat:400,700:latin', 'Open+Sans:400,300:latin' ] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})(); 
+	</script>
 
 	<script>
 
-		// fade effect
+	function initResume(){
+			// fade effect
 		var minDistance = 80,
 		marginTolerance = 20
 		windowH = $(window).height();
@@ -272,6 +286,7 @@
 			});
 		});
 
+
 		// Image preloader
 		var onhoverIcons = new Array();
 		var overPath = "assets/icons/Onhover/";
@@ -287,8 +302,6 @@
 				overPath + "instagram_hover.svg"
 			);
 		});
-
-
 		// Preload and cache array of images
 		(function($) {
 		  var cache = [];
@@ -303,18 +316,14 @@
 		  }
 		})(jQuery)
 
-
 		var img = new Image(),
 	    	url = "assets/background.jpg";
-		
 
 		img.onload = function () { 
-			$("#profile").css("background-image",  "url("+ img.src +")");
-			// $("#profile").css("background-repeat", "no-repeat");
-			// console.log("Background loaded: " + "url("+ img.src +")");
+			document.getElementById("profile").style.backgroundImage = "url("+ img.src +")";
 		};
 		img.src = url;
+	}
 	</script>
-
 </body>
 </html>
